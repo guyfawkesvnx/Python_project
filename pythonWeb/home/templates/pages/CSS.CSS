@@ -1,0 +1,237 @@
+@keyframes animation_primary_right_main{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0, 0);
+    }
+}
+@keyframes animation_primary_left_sub{
+    0%{
+        opacity: 0;
+        transform: translateY(-120px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0, 0);
+    }
+}
+@keyframes animation_primary_bottom_btn{
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0, 0);
+    }
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*html{
+    background-image: linear-gradient(rgba(234,212,123,0.5),rgba(209,123,213,0.5)), url(../Img/img/background1.jpg);
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+    background-attachment: fixed;
+}*/
+body{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.6;
+    color: black;
+    padding: 30px;
+}
+header{
+    background-image: linear-gradient(rgba(234,212,123,0.5),rgba(209,123,213,0.5)), url(./img/background1.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    height: 96.6vh;
+    clip-path: ellipse(70% 56% at 48% 40%);
+
+}
+
+
+/*
+ BUTTON CALL
+*/
+
+.btn,
+.btn:link,
+.btn:visited{
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    font-size: 16px;
+    position: relative;
+    top:30px;
+}
+.btn-blue{
+    color: rgb(105, 70, 27);
+    background-color: bisque;
+}
+
+.btn:hover{
+    transform: translateY(-6px);
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, 5);
+}
+.btn:active{
+    transform: translateY(-1px);
+    outline: none;
+    box-shadow: 0px 5px 10px rgba(123, 231,5, 0.3);
+}
+.btn::after{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 100px;
+    z-index: -1; 
+    transition: all .5s;
+}
+.btn-blue::after{
+    color: rgb(105, 70, 27);
+    background-color: bisque;
+}
+.btn:hover::after{
+    transform: scaleX(1.5) scaleY(1.4); 
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, 5);
+    opacity: 0;
+}
+.btn{
+    animation: animation_primary_bottom_btn 1s ease-in;
+    animation-fill-mode: backwards;
+}
+
+/*
+LOGO 
+*/
+
+.logo{
+    height: 70px;
+}
+.logo-header{
+    position: absolute;
+    top: 30px;
+    left: 30px ;
+}
+
+/* TEXT MAIN */
+.text-vne{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50, -50);
+    text-align: center;
+    /*  animation-iteration-count: 1; số lần lập lại - lập lại vô hạn với infinite
+        animation-delay: 1s; thời gian trể để xuất hiện hiệu ứng
+        animation: <animation-name> <animation-duration> <animation-timing-function> <animation-delay> <animation...>
+    */
+
+}
+.header-primary{
+    text-transform: uppercase;
+    margin-bottom: 60px;
+}
+.header-primary_main{
+    display: block;
+    font-size: 70px;
+    letter-spacing: 5px;
+    animation-name: animation_primary_right_main;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+.header-primary_sub{
+    font-variant: small-caps;
+    display: block;
+    font-size: 30px;
+    letter-spacing: 20px;
+    animation: animation_primary_left_sub 1s ease-out;
+}
+
+/* TEXT LEFT MAIN */
+
+
+/* NAV MENUBAR */
+
+.navbar-nav{
+    list-style-type: none;
+    float: right;
+    margin-right: 50px;
+}
+.navbar-nav navbar-iteam-active{
+    border-left: none;
+}
+.navbar-nav li{
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: 50px;
+}
+.navbar-nav a{
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    border-left: 1px solid white;
+    padding-left: 25px;
+}
+
+
+/*
+Footer 
+*/
+
+.footer-skip {
+    height:100%;
+}
+footer{
+    background-image: linear-gradient(rgba(234,212,123,0.5),rgba(209,123,213,0.5)), url(./img/background1.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    height: 96.8vh;
+}
+.text-information{
+    text-transform: uppercase;
+    font-size:30px;
+    letter-spacing: 10px;
+    margin-left: 120px;
+}
+.footer-primary_sub{
+    margin-left: -65px;
+}
+
+/*
+ INFOMATION
+*/
+.text-information{
+    text-align: center;
+
+}
+
+.listinfo{
+    list-style-type: none;
+}
+.listinfo li a{
+    text-decoration: none;
+    text-transform: none;
+}
+.information{
+    font-size: 40px;
+    position: absolute;
+    margin-left: 30px;
+    margin-top: 100px;
+}
+
+
