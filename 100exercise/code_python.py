@@ -127,3 +127,24 @@
 #     if not intp % 5:
 #         value.append(p)
 # print(",".join(value))
+
+#bai 15
+# values = []
+# for i in range(1000, 3000 + 1):
+#     s = str(i)
+#     if (int(s[0])%2==0) and (int(s[1])%2==0) and (int(s[2])%2==0) and (int(s[3])%2==0):
+#         values.append(s)
+# print("-".join(values))
+
+#bai 16
+# values = input("Nhap dau vao: ")
+# s = {"chu":0, "so":0}
+# for c in values:
+#     if c.isdigit():
+#         s["chu"]+=1
+#     elif c.isalpha():
+#         s["so"]+=1
+#     else:
+#         pass
+# print("so chu la: " , s["chu"])
+# print("so: ", s["so"])
